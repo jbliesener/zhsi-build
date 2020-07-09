@@ -14,8 +14,7 @@ RUN git clone https://code.qt.io/qt/qt5.git && \
     cd .. && \
     mkdir qt5build-static && \
     cd qt5build-static && \
-    ../qt5/configure -static -prefix /opt/qt5-static -opensource -confirm-license -qt-zlib -qt-libjpeg -qt-libpng -qt-freetype -qt-pcre -qt-harfbuzz -no-opengl -nom
-ake examples -nomake tests && \
+    ../qt5/configure -static -prefix /opt/qt5-static -opensource -confirm-license -qt-zlib -qt-libjpeg -qt-libpng -qt-freetype -qt-pcre -qt-harfbuzz -no-opengl -nomake examples -nomake tests && \
     make -j 4 && \
     make install
 RUN wget http://developer.x-plane.com/wp-content/plugins/code-sample-generation/sample_templates/XPSDK300.zip
