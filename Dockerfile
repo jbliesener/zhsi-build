@@ -1,3 +1,4 @@
+FROM ubuntu:bionic
 RUN apt update -qq
 RUN apt -yq install gnupg ca-certificates apt-transport-https software-properties-common git
 RUN echo "deb http://mirror.mxe.cc/repos/apt bionic main" | tee /etc/apt/sources.list.d/mxeapt.list
